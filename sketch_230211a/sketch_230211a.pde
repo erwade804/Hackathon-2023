@@ -33,9 +33,13 @@ boolean showHover = true;
 Map[][] maps = new Map[mapWidth][mapHeight];
 ArrayList<building> buildings = new ArrayList <building>();
 
+//Music
+SoundFile menuSoundTrack;
+
 void setup(){ // before the game starts
   fullScreen();
   noFill();
+  menuSoundTrack = new SoundFile(this, "menu-music.mp3");
   stroke(255, 255, 255);
   rectMode(CORNERS); // used for rect
   initbuildings();
@@ -49,7 +53,7 @@ void setup(){ // before the game starts
 void draw(){
   keyboardInput();
   background(34,177,35);
-  
+  menuSoundTrack.loop();
   drawGame();
   //PImage img = buildings.get(0).art;
   //img.resize(50,50);
