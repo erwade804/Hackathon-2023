@@ -48,7 +48,6 @@ void setup(){ // before the game starts
 
 void draw(){
   keyboardInput();
-  background(51);
+  background(34,177,35);
   drawGrid();
-  //line(mouseX, mouseY, mouseX+2, mouseY+2);
 }

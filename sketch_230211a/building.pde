@@ -28,5 +28,14 @@ class building {
     return("" + this.name + " " + this.blength + " " + this.bwidth + " " + this.yield + " " + this.upkeep + "" + this.mapColor);
   }
 }
+
+PImage loadSprite(String fileName){
+  try{
+    return loadImage("Sprite/"+fileName);
+  }
+  catch(Exception e){
+    return createImage(0, 0, RGB);
+  }
+}
   
   
