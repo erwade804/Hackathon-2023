@@ -1,8 +1,13 @@
 import processing.sound.SoundFile;
 
 void drawGrid(){ // draw's grid
-  if(!gameSoundTrack1.isPlaying()){
-    gameSoundTrack1.loop();
+int cycle = 1;
+  if(!gameSoundTrack1.isPlaying() && cycle == 1){
+    gameSoundTrack1.play();
+    cycle++;
+  } else if(!gameSoundTrack2.isPlaying() && cycle == 2){
+    gameSoundTrack2.play();
+    cycle++;
   }
   pushMatrix();
   translate(x, y);
