@@ -26,16 +26,12 @@ int months = 0;
 int days = 0;
 
 // states
-String mode = "build";
+String mode = "mainMenu";
 boolean showHover = true;
 
 // memory access
 Map[][] maps = new Map[mapWidth][mapHeight];
 ArrayList<building> buildings = new ArrayList <building>();
-
-//Music
-SoundFile menuSoundTrack = new SoundFile(this, "menu-music");
-
 
 void setup(){ // before the game starts
   fullScreen();
@@ -43,17 +39,19 @@ void setup(){ // before the game starts
   stroke(255, 255, 255);
   rectMode(CORNERS); // used for rect
   initbuildings();
-  menuSoundTrack.loop();
   for(int i = 0; i < mapWidth; i++){ // loads map into memory
     for(int j = 0; j < mapHeight; j++){
       maps[i][j] = loadMap(i, j);
     }
   }
-  //noCursor(); // 
 }
 
 void draw(){
   keyboardInput();
   background(34,177,35);
-  drawGrid();
+  
+  drawGame();
+  //PImage img = buildings.get(0).art;
+  //img.resize(50,50);
+  //image(img, 0, 0);
 }
