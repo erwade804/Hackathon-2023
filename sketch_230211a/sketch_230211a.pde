@@ -53,7 +53,6 @@ void setup(){ // before the game starts
 void draw(){
   keyboardInput();
   background(34,177,35);
-  menuSoundTrack.loop();
   drawGame();
   //PImage img = buildings.get(0).art;
   //img.resize(50,50);

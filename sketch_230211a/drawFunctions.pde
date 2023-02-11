@@ -37,8 +37,9 @@ void hover(){
 }
 
 void drawMenu(){
-
-  
+  if(!menuSoundTrack.isPlaying()){
+    menuSoundTrack.loop();
+  }
   
   
   
