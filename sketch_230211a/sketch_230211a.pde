@@ -26,7 +26,7 @@ int months = 0;
 int days = 0;
 
 // states
-String mode = "build";
+String mode = "mainMenu";
 boolean showHover = true;
 
 // memory access
@@ -44,13 +44,13 @@ void setup(){ // before the game starts
       maps[i][j] = loadMap(i, j);
     }
   }
-  //noCursor(); // 
 }
 
 void draw(){
   keyboardInput();
   background(34,177,35);
-  drawGrid();
+  
+  drawGame();
   //PImage img = buildings.get(0).art;
   //img.resize(50,50);
   //image(img, 0, 0);
