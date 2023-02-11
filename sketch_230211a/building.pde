@@ -19,6 +19,7 @@ class building {
     location = locationcreate;
     mapColor = mapColors;
   }
+  
   void setDescription(String paragraph){
    description = paragraph;
   }

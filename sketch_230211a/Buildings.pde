@@ -1,6 +1,6 @@
-void initbuildings () {
-  buildings.add(new building("fishingWharf", 10, 10, new PImage(10,10,RGB), 1, 0, new PVector(), color(0, 0, 1)));
-  buildings.add(new building("farm1", 10, 10, new PImage(10,10,RGB), 1, 0, new PVector(), color(0, 0, 2)));
+void initbuildings () { // all bulidings to memory
+  buildings.add(new building("fishingWharf", 1, 1, new PImage(10,10,RGB), 1, 0, new PVector(), color(0, 0, 1)));
+  buildings.add(new building("farm1", 2, 2, new PImage(10,10,RGB), 1, 0, new PVector(), color(0, 0, 2)));
   buildings.add(new building("farm2", 10, 10, new PImage(10,10,RGB), 1, 0, new PVector(), color(0, 0, 3)));
   buildings.add(new building("stoneQuarry", 10, 10, new PImage(10,10,RGB), 1, 0, new PVector(), color(0, 0, 4)));
   buildings.add(new building("goldMine", 10, 10, new PImage(10,10,RGB), 1, 0, new PVector(), color(0, 0, 5)));
