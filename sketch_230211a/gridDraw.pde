@@ -6,13 +6,19 @@ void drawGrid(){ // draw's grid
   for(int i = 0; i < 10; i++){
     for(int j = 0; j < 10; j++){
       rect(i*unitSize, j*unitSize, (i+1)*unitSize, (j+1)*unitSize);
-      //println(i*unitSize, j*unitSize, (i+1)*unitSize, (j+1)*unitSize);
     }
   }
   popMatrix();
   // draw maps here when writen
   
   
+  // hover if needs to show hover
+  hover();
+}
+
+
+
+void hover(){
   // hover if needs to show hover
   if(showHover){
     int newx = mouseX -x; // newx newy for map position in world not screen

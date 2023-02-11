@@ -33,7 +33,7 @@ class building {
 
 PImage loadSprite(String fileName){ // loads sprite and returns
   try{
-    return loadImage("Sprite/"+fileName);
+    return loadImage("Sprites/"+fileName);
   }
   catch(Exception e){
     return createImage(0, 0, RGB);

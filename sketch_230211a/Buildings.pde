@@ -1,5 +1,5 @@
 void initbuildings () { // all bulidings to memory
-  buildings.add(new building("fishingWharf", 1, 1, "", 1, 0, null, color(0, 0, 1)));
+  buildings.add(new building("fishingWharf", 1, 1, "shack.png", 1, 0, null, color(0, 0, 1)));
   buildings.add(new building("farm1", 2, 2, "", 1, 0, null, color(0, 0, 2)));
   buildings.add(new building("farm2", 10, 10, "", 1, 0, null, color(0, 0, 3)));
   buildings.add(new building("stoneQuarry", 10, 10, "", 1, 0, null, color(0, 0, 4)));
