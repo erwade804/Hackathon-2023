@@ -7,6 +7,7 @@ class building {
  int upkeep;
  PVector location;
  color mapColor;
+ String description;
 
   building(String namecreate, int blengthcreate, int bwidthcreate, PImage artcreate, int yieldcreate, int upkeepcreate, PVector locationcreate, color mapColors){
     name = namecreate;
@@ -17,6 +18,9 @@ class building {
     upkeep = upkeepcreate;
     location = locationcreate;
     mapColor = mapColors;
+  }
+  void setDescription(String paragraph){
+   description = paragraph;
   }
   
   String toString (){
