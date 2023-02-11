@@ -5,7 +5,7 @@ String mode = "freeRoam";
 int mapWidth = 10;
 int mapHeight = 10;
 Map[][] maps = new Map[mapWidth][mapHeight];
-
+ArrayList buildings = new ArrayList <building>();
 int scrollSpeed = 10;
 
 void setup(){
@@ -13,6 +13,8 @@ void setup(){
   noFill();
   stroke(255, 255, 255);
   rectMode(CORNERS);
+  initbuildings();
+  println(buildings);
   for(int i = 0; i < mapWidth; i++){
     for(int j = 0; j < mapHeight; j++){
       maps[i][j] = loadMap(i, j);
