@@ -6,7 +6,7 @@ class building {
  int upkeep;
  PVector location;
 
-building(blengthcreate, bwidthcreate, artcreate, yieldcreate, upkeepcreate, locationcreate){
+building(int blengthcreate, int bwidthcreate, PImage artcreate, int yieldcreate, int upkeepcreate, PVector locationcreate){
   blength = blengthcreate;
   bwidth = bwidthcreate;
   art = artcreate;
