@@ -16,11 +16,11 @@ building(String namecreate, int blengthcreate, int bwidthcreate, PImage artcreat
   yield = yieldcreate;
   upkeep = upkeepcreate;
   location = locationcreate;
-  mapColor = mapColors
+  mapColor = mapColors;
   }
   
 String toString (){
-  return("" + this.name + " " + this.blength + " " + this.bwidth + " " + this.yield + " " + this.upkeep + "" + this.mapColor);
-}
+    return("" + this.name + " " + this.blength + " " + this.bwidth + " " + this.yield + " " + this.upkeep + "" + this.mapColor);
+  }
   
   
