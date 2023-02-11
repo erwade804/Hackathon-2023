@@ -29,7 +29,7 @@ boolean showHover = true;
 
 // memory access
 Map[][] maps = new Map[mapWidth][mapHeight];
-ArrayList buildings = new ArrayList <building>();
+ArrayList<building> buildings = new ArrayList <building>();
 
 
 void setup(){ // before the game starts

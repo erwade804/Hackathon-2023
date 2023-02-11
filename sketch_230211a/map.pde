@@ -37,6 +37,14 @@ Map loadMap(int x, int y){
   }
 }
 
-void drawMap(){
-  
+void drawMap(Map map){
+  map.mapImage.loadPixels();
+  for(int i = 0; i < mapWidth; i++){
+    for(int j = 0; j < mapHeight; j++){
+      // draw the building it is
+      for(building a: buildings){
+        image(a.art, i*mapWidth, i*mapHeight);
+      }
+    }
+  }
 }

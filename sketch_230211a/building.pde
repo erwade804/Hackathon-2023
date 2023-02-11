@@ -8,16 +8,18 @@ class building {
  PVector location;
  color mapColor;
  String description;
+ String filePath;
 
-  building(String namecreate, int blengthcreate, int bwidthcreate, PImage artcreate, int yieldcreate, int upkeepcreate, PVector locationcreate, color mapColors){
+  building(String namecreate, int blengthcreate, int bwidthcreate, String artFilePath, int yieldcreate, int upkeepcreate, PVector locationcreate, color mapColors){
     name = namecreate;
     blength = blengthcreate;
     bwidth = bwidthcreate;
-    art = artcreate;
+    filePath = artFilePath;
     yield = yieldcreate;
     upkeep = upkeepcreate;
     location = locationcreate;
     mapColor = mapColors;
+    art = loadSprite(filePath);
   }
   
   void setDescription(String paragraph){
@@ -29,7 +31,7 @@ class building {
   }
 }
 
-PImage loadSprite(String fileName){
+PImage loadSprite(String fileName){ // loads sprite and returns
   try{
     return loadImage("Sprite/"+fileName);
   }

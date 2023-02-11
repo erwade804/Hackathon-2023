@@ -11,7 +11,15 @@ void keyboardInput(){
 }
 
 void mouseInput(){
+  if (mode == "freeRoam"){
   
+  }
+  if (mode == "build"){
+    // select build
+    // if build selected check price
+    // check valid square
+    // place building
+  }
 }
 
 
