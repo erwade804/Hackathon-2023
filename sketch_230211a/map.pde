@@ -43,6 +43,7 @@ void drawMap(Map map){
     for(int j = 0; j < mapHeight; j++){
       // draw the building it is
       for(building a: buildings){
+        a.art.resize(50, 50);
         image(a.art, i*mapWidth, i*mapHeight);
       }
     }

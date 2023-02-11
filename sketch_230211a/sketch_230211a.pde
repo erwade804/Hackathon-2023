@@ -33,8 +33,6 @@ boolean showHover = true;
 Map[][] maps = new Map[mapWidth][mapHeight];
 ArrayList<building> buildings = new ArrayList <building>();
 
-
-
 void setup(){ // before the game starts
   fullScreen();
   noFill();
@@ -53,4 +51,7 @@ void draw(){
   keyboardInput();
   background(34,177,35);
   drawGrid();
+  //PImage img = buildings.get(0).art;
+  //img.resize(50,50);
+  //image(img, 0, 0);
 }
