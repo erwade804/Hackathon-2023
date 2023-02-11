@@ -33,6 +33,8 @@ boolean showHover = true;
 Map[][] maps = new Map[mapWidth][mapHeight];
 ArrayList<building> buildings = new ArrayList <building>();
 
+//Music
+SoundFile menuSoundTrack = new SoundFile(this, "menu-music");
 
 
 void setup(){ // before the game starts
@@ -41,6 +43,7 @@ void setup(){ // before the game starts
   stroke(255, 255, 255);
   rectMode(CORNERS); // used for rect
   initbuildings();
+  menuSoundTrack.loop();
   for(int i = 0; i < mapWidth; i++){ // loads map into memory
     for(int j = 0; j < mapHeight; j++){
       maps[i][j] = loadMap(i, j);
