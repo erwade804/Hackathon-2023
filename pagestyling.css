@@ -1,10 +1,15 @@
 body {
   background-color: skyblue;
 }
-h1 {
+
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10vw;
+  margin: 10px;
   text-align: center;
   color: blue;
 }
+
 p {
   font-family: sans-serif;
 }
