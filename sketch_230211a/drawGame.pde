@@ -1,24 +1,22 @@
-//Draws game based on mode 
-void drawGame(){
-  if(mode == "freeRoam"){
+//Draws game based on mode
+void drawGame() {
+  if (mode == "freeRoam") {
     drawGrid();
     showHover = false;
-  }
-  else if(mode == "build"){
+    drawResourceText();
+  } else if (mode == "build") {
     drawGrid();
     drawBuildUI();
     showHover = true;
     drawResourceText();
-  }
-  else if(mode == "mainMenu"){
+    hover();
+  } else if (mode == "mainMenu") {
     drawMenu();
     drawProgress();
-  }
-  else if(mode == "options"){
+  } else if (mode == "options") {
     drawOptions();
     drawProgress();
-  }
-  else if(mode == "dialog"){
+  } else if (mode == "dialog") {
     drawGrid();
     showHover = false;
     drawDialog();

@@ -92,6 +92,7 @@ void setup() { // before the game starts
   eventsInit();
   eventQueue.add(allEvents.get(0));
   eventQueue.add(allEvents.get(1));
+  eventQueue.add(allEvents.get(2));
   currentEvent = allEvents.get(0);
   startbutton = loadSprite("grayStart.png");
   optionsbutton = loadSprite("options.png");

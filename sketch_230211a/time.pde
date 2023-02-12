@@ -4,7 +4,7 @@ void trackTime() {
     lastSecondUpdated += 1;
   }
   lastSecondTracked = second();
-  if (lastSecondUpdated == 3) {
+  if (lastSecondUpdated == 1) {
     tick();
     lastSecondUpdated = 0;
   }
@@ -12,7 +12,7 @@ void trackTime() {
 
 
 void tick() {
-  println("got here");
+  //println("got here");
   for (int i = 0; i < 10; i++) {
     for (int j = 0; j < 10; j++) {
       for (int k = 0; k < 100; k++) {
@@ -33,6 +33,28 @@ void tick() {
               if (money > a.upkeep) {
                 stone += a.yield;
                 money -= a.upkeep;
+              }
+            } else if (a.yeildType == 4) {
+              if (money > a.upkeep) {
+                wood += a.yield;
+                money -= a.upkeep;
+              }
+            } else if (a.yeildType == 5) {
+              if (money > a.upkeep) {
+                iron += a.yield;
+                money -= a.upkeep;
+              }
+            } else if (a.yeildType == 6) {
+              if (money > a.upkeep) {
+                steel += a.yield;
+                money -= a.upkeep;
+              }
+            } else if (a.yeildType == 7) {
+              money += a.yield;
+            } else if (a.yeildType == 8) {
+              if (money > a.upkeep) {
+                planks += a.yield;
+                wood -= a.upkeep;
               }
             }
           }
