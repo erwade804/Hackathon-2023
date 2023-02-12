@@ -23,11 +23,11 @@ int subCategoryScroll = 0;
 building selectedBuilding;
 
 // resources
-int stone = 50;
+int stone = 100;
 int iron = 50;
-int wood = 100;
-int food = 75;
-int money = 400;
+int wood = 150;
+int food = 175;
+int money = 600;
 int steel = 0;
 int gold = 0;
 int planks = 0;

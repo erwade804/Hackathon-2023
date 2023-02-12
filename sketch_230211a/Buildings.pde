@@ -3,29 +3,30 @@ void initbuildings () { // all bulidings to memory
   //buildings.add(new building("shack", 1, 1, "shack.png", 1, 1, null, color(0, 0, 1), [120, 0, 10, 0, 0, 0]));
   buildings.add(new building("shack", 1, 1, "shack.png", 1, 1, null, color(0, 0, 1), 120, 0, 10, 0, 0, 0));
   buildings.get(0).art.resize(50, 50);
-  buildings.add(new building("family house", 2, 2, "familyHouse.png", 7, 3, null, color(0, 1, 2), 400, 15, 40, 0, 0, 0));
+  buildings.add(new building("family house", 2, 2, "familyHouse.png", 6, 3, null, color(0, 1, 2), 400, 20, 40, 0, 0, 0));
   buildings.get(1).art.resize(50, 50);
-  buildings.add(new building("fancy house", 10, 10, "fancyHouse.png", 12, 6, null, color(0, 2, 3), 1000, 50, 50, 0, 0, 20));
+  buildings.add(new building("fancy house", 10, 10, "fancyHouse.png", 15, 6, null, color(0, 2, 3), 1000, 50, 100, 35, 0, 20));
   buildings.get(2).art.resize(50, 50);
-  buildings.add(new building("mansion", 10, 10, "mansion.png", 16, 10, null, color(0, 3, 4), 1600, 50, 70, 0, 0, 45));
+  buildings.add(new building("mansion", 10, 10, "mansion.png", 25, 10, null, color(0, 3, 4), 1600, 70, 140, 50, 0, 45));
   buildings.get(3).art.resize(50, 50);
   
   // food
-  buildings.add(new building("fishing wharf", 10, 10, "shack.png", 3, 1, null, color(1, 0, 1), 200, 0, 15, 0, 0, 0));
+  buildings.add(new building("fishing wharf", 10, 10, "shack.png", 3, 1, null, color(1, 0, 1), 200, 15, 15, 0, 0, 0));
   buildings.get(4).art.resize(50, 50);
   //// not linked
-  //buildings.add(new building("farms", 10, 10, "", 1, 0, null, color(1, 1, 1)));
+  //buildings.add(new building("farms", 10, 10, "", 1, 0, null, color(1, 1, 1), 150, 0, 20, 0, 0, 0));
   
   // resources, not linked
-  //buildings.add(new building("stone quarry", 10, 10, "", 1, 0, null, color(2, 0, 1)));
-  //buildings.add(new building("lumber mill", 10, 10, "", 1, 0, null, color(2, 1, 1)));
-  //buildings.add(new building("logging industry", 10, 10, "", 1, 0, null, color(2, 2, 2)));
-  //buildings.add(new building("iron mine", 10, 10, "", 1, 0, null, color(2, 3, 1)));
-  //buildings.add(new building("smeltry", 10, 10, "", 1, 0, null, color(2, 4, 2)));
-  //buildings.add(new building("gold mine", 10, 10, "", 1, 0, null, color(2, 5, 1)));
+  //buildings.add(new building("stone quarry", 10, 10, "", 5, 2, null, color(2, 0, 1), 200, 0, 10, 15, 0, 0));
+  //buildings.add(new building("woodcutters hut", 10, 10, "", 5, 2, null, color(2, 1, 1), 180, 10, 10, 0, 0, 0));
+  //buildings.add(new building("logging industry", 10, 10, "", 10, 6, null, color(2, 2, 2), 700, 450, 300, 70, 0, 0));
+  //buildings.add(new building("iron mine", 10, 10, "", 5, 4, null, color(2, 3, 1), 300, 15, 10, 0, 0, 0));
+  //buildings.add(new building("smeltry", 10, 10, "", 10, 6, null, color(2, 4, 2), 800, 350, 250, 400, 0, 100)));
+  //buildings.add(new building("gold mine", 10, 10, "", 5, 4, null, color(2, 5, 1), 150, 15, 0, 15, 0, 0)));
   
   // government buildings
   //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1)));
+  //buildings.add(new building("presidentialStatue", 60, 60, "", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750);
   maxBuildCategory = 1;
 
   //buildings.add(new building("policeStation", 10, 10, "", 1, 0, null, color(0, 0, 11)));
