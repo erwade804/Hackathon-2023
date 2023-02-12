@@ -13,7 +13,6 @@ void drawGrid() { // draw's grid
   int squarex = newx/unitSize; // which square the mouse is on
   int squarey = newy/unitSize;
 
-  //println("maps", mapx, mapy);
   // get maps within range of 1-10 for x and y
   Map[][] renderedMaps = new Map[5][3];
   for (int i = 0; i < 5; i++) {
@@ -92,7 +91,6 @@ void hover() {
     int squarey = newy/unitSize;
     fill(0, 0, 255);
 
-    //println(mapx, mapy);
     pushMatrix();
     translate(x, y);
     //image()// get building.art

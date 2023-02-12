@@ -45,7 +45,6 @@ class building {
   }
 
   boolean canAfford() {
-    //println(price <= money, stonecost <= stone, woodcost <= wood, ironcost <= iron, plankcost <= planks);
     if (price <= money && stonecost <= stone && woodcost <= wood && ironcost <= iron && plankcost <= planks) {
       return true;
     }

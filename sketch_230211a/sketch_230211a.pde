@@ -1,7 +1,7 @@
 import processing.sound.*;
 String mode = "mainMenu";
 String savedDialogMode = "freeRoam";
-boolean sound = false;
+boolean sound = true;
 // global variables
 //player camera position
 int x = 0;

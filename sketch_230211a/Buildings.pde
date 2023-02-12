@@ -6,9 +6,9 @@ void initbuildings () { // all bulidings to memory
   buildings.add(new building("family house", 2, 2, "familyHouse.png", 6, 3, null, color(0, 1, 2), 400, 20, 40, 0, 0, 0, 0, 1, 2));
   buildings.get(1).art.resize(50, 50);
   buildings.add(new building("fancy house", 10, 10, "fancyHouse.png", 15, 6, null, color(0, 2, 3), 1000, 50, 100, 35, 0, 20, -1, 1, 2));
-  buildings.get(2).art.resize(50, 100);
+  buildings.get(2).art.resize(50, 50);
   buildings.add(new building("mansion", 10, 10, "mansion.png", 25, 10, null, color(0, 3, 4), 1600, 70, 140, 50, 0, 45, -2, 1, 2));
-  buildings.get(3).art.resize(100, 100);
+  buildings.get(3).art.resize(50, 50);
 
   // food
   buildings.add(new building("farm", 10, 10, "farmHouse.png", 2, 0, null, color(1, 0, 1), 150, 0, 20, 0, 0, 0, 0, 2, 1));
@@ -23,12 +23,12 @@ void initbuildings () { // all bulidings to memory
   buildings.add(new building("woodcutters hut", 10, 10, "WoodHut.png", 3, 1, null, color(2, 1, 1), 180, 20, 20, 0, 0, 0, 0, 4, 1));
   buildings.get(7).art.resize(50, 50);
   buildings.add(new building("logging industry", 10, 10, "LoggingFactory.png", 12, 6, null, color(2, 2, 2), 700, 450, 300, 70, 0, 0, 10, 8, 4));
-  buildings.get(8).art.resize(100, 100);
+  buildings.get(8).art.resize(50, 50);
   buildings.add(new building("iron mine", 10, 10, "Ironmine.png", 5, 3, null, color(2, 3, 1), 300, 30, 20, 0, 0, 0, 2, 5, 1));
   buildings.get(9).art.resize(50, 50);
   //buildings.add(new building("smeltry", 10, 10, "", 15, 6, null, color(2, 4, 2), 800, 350, 250, 400, 0, 100, 15));
   buildings.add(new building("smeltry", 10, 10, "SteelFactory.png", 10, 6, null, color(2, 4, 2), 800, 350, 250, 400, 0, 100, 5, 6, 5));
-  buildings.get(10).art.resize(100, 100);
+  buildings.get(10).art.resize(50, 50);
   buildings.add(new building("gold mine", 10, 10, "Goldmine.png", 10, 0, null, color(2, 5, 1), 150, 30, 0, 15, 0, 0, 1, 7, 0));
   buildings.get(11).art.resize(50, 50);
 
