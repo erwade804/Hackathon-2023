@@ -9,6 +9,12 @@ void drawGrid(){ // draw's grid
   }
   if(!gameSoundTrack2.isPlaying() && cycle == 2){
     gameSoundTrack2.play();
+  } else if (gameSoundTrack2.percent() >= 98.5){
+    cycle += 1;
+  }
+  if(!gameSoundTrack3.isPlaying() && cycle == 3){
+    gameSoundTrack3.play();
+  } else if (gameSoundTrack3.percent() >= 98.5){
     cycle += 1;
   }
   pushMatrix();

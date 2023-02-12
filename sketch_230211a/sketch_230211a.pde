@@ -38,6 +38,7 @@ ArrayList<building> buildings = new ArrayList <building>();
 SoundFile menuSoundTrack;
 SoundFile gameSoundTrack1;
 SoundFile gameSoundTrack2;
+SoundFile gameSoundTrack3;
 
 void setup(){ // before the game starts
   fullScreen();
@@ -45,6 +46,7 @@ void setup(){ // before the game starts
   menuSoundTrack = new SoundFile(this, "menu-music.mp3");
   gameSoundTrack1 = new SoundFile(this, "Track1.mp3");
   gameSoundTrack2 = new SoundFile(this, "Track2.mp3");
+  gameSoundTrack2 = new SoundFile(this, "Track3.mp3");
   stroke(255, 255, 255);
   rectMode(CORNERS); // used for rect
   initbuildings();
