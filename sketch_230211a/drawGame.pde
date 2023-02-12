@@ -1,3 +1,4 @@
+//Draws game based on mode 
 void drawGame(){
   if(mode == "freeRoam"){
     drawGrid();

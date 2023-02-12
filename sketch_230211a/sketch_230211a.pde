@@ -1,12 +1,12 @@
 import processing.sound.*;
 
 // global variables
+//player camera position
 int x = 0;
 int y = 0;
+//selected soundtrack
 int cycle = 1;
-int buildCategory = 0;
-int maxBuildCategory = 0;
-int subCategoryScroll = 0;
+//Has enough of the game been to start
 boolean loaded = false;
 int soundLoaded = 0;
 boolean stopped = false;
@@ -14,6 +14,11 @@ float volume = .005;
 Sound s;
 
 // selected build
+int buildCategory = 0;
+//Max number of categorys of buildings
+int maxBuildCategory = 0;
+//Scroll wheel for subcategory
+int subCategoryScroll = 0;
 building selectedBuilding;
 
 // resources
@@ -38,7 +43,7 @@ int months = 0;
 int days = 0;
 
 // states
-String mode = "mainMenu";
+String mode = "build";
 boolean showHover = true;
 
 // memory access
@@ -79,8 +84,10 @@ void setup(){ // before the game starts
 void threadIt(){ // 
   gameSoundTrack1 = new SoundFile(this, "Track1.mp3");
   soundLoaded++;
+  //Visual que that game is ready to start
   startbutton = loadSprite("start.png");
   loaded = true;
+  //load addition soundtracks in the background
   gameSoundTrack2 = new SoundFile(this, "Track2.mp3");
   soundLoaded++;
   gameSoundTrack3 = new SoundFile(this, "Track3.mp3");
@@ -92,6 +99,7 @@ void threadIt(){ //
 }
 
 void draw(){
+  //green background
   background(34,177,35);
   drawGame();
 }

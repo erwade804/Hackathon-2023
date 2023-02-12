@@ -1,6 +1,6 @@
 
 
-void keyPressed(){
+void keyPressed(){ // keyboard mode select switch
   if(keyPressed){
     if(mode == "freeRoam"){
       freeRoamKeyboard();
@@ -17,47 +17,45 @@ void mouseClicked(){
   
   }
   if(mode == "mainMenu"){
-    println(mouseX, mouseY);
-    if(mouseX>width/2-200 && mouseX < width/2+200){
-      if(mouseY > 100 && mouseY < 300){
-        if(loaded){
+    if(mouseX>width/2-200 && mouseX < width/2+200){ // button x range
+      if(mouseY > 100 && mouseY < 300){ // play button
+        if(loaded){ // if game is ready to play
           changeMode("freeRoam");
         }
       }
-      if(mouseY > 300 && mouseY < 500){
+      if(mouseY > 300 && mouseY < 500){ // options button
         changeMode("options");
       }
-      if(mouseY > 500 && mouseY < 700){
+      if(mouseY > 500 && mouseY < 700){ // if exit button clicked
         stopped = true;
         stop();
       }
     }
   }
-  if(mode == "options"){
-    if(mouseX > width/2-200 && mouseX < width/2 +200){
-      if(mouseY > 500 && mouseY < 700){
-        changeMode("mainMenu");
+  if(mode == "options"){ // options mode (from main menu)
+    if(mouseX > width/2-200 && mouseX < width/2 +200){ // button x range
+      if(mouseY > 500 && mouseY < 700){ // button y range
+        changeMode("mainMenu"); // change to main menu
       }
     }
   }
-  if (mode == "build"){
-    if (mouseX > width-350){
+  if (mode == "build"){ // build mode
+    if (mouseX > width-350){ // if within the overlay
       // now in the overlay
-      if(mouseX > width-200 && mouseX < width-150){
+      if(mouseX > width-200 && mouseX < width-150){ // selection's x range
         for(int i = 0; i< 6; i++){
-          if(mouseY > 100*(i+1) && mouseY < 100*(i+1) + 50){
-            // select index i % category size
-            ArrayList <building> buildingsInCategory = new ArrayList<building>();
+          if(mouseY > 100*(i+1) && mouseY < 100*(i+1) + 50){ // 6 individual y ranges (repeating if more than 6)
+            ArrayList <building> buildingsInCategory = new ArrayList<building>(); // allowed buildings in category
             for(building a: buildings){
-              if (red(a.mapColor) == buildCategory){
+              if (red(a.mapColor) == buildCategory){ // if the building is in the category, add it to the list of allowed buildings
                 buildingsInCategory.add(a);
               }
             }
-            selectedBuilding = buildingsInCategory.get(i % buildingsInCategory.size());
+            selectedBuilding = buildingsInCategory.get(i % buildingsInCategory.size()); // get selected buliding from mouse click
           }
         }
       }
-    } else{
+    } else{ // not in overlay (must have building selected for anything to happen)
       
     }
     // select build
@@ -70,7 +68,7 @@ void mouseClicked(){
 
 
 
-void freeRoamKeyboard(){
+void freeRoamKeyboard(){ // keyboard checks for free roam
   if(key == 'w'){
     y += scrollSpeed;
   }
@@ -85,7 +83,7 @@ void freeRoamKeyboard(){
   }
 }
 
-void buildModeKeyboard(){
+void buildModeKeyboard(){ // keyboard checks for build mode
   if(key == 'w'){
     y += scrollSpeed;
   }
@@ -98,13 +96,13 @@ void buildModeKeyboard(){
   else if(key == 'd'){
     x -= scrollSpeed;
   }
-  else if(keyCode == UP){
+  else if(keyCode == UP){ // selecting sub category
     subCategoryScroll -= 1;
   }
   else if (keyCode == DOWN){
     subCategoryScroll += 1;
   }
-  else if (keyCode == RIGHT){
+  else if (keyCode == RIGHT){ // selecting category
     buildCategory += 1;
     if(buildCategory > maxBuildCategory){
       buildCategory = 0;

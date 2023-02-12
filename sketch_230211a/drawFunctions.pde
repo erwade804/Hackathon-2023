@@ -18,7 +18,7 @@ void drawGrid(){ // draw's grid
 }
 
 
-
+//For hover icon
 void hover(){
   // hover if needs to show hover
   if(showHover){
@@ -52,7 +52,7 @@ void drawMenu(){
 }
 
 
-
+//Side bar menu ingame
 void drawBuildUI(){
   pushMatrix();
   translate(width, 0);
@@ -72,6 +72,7 @@ void drawBuildUI(){
       buildingsInCategory.add(a);
     }
   }
+  //Implements an infinit scroll on sub categories
   for(int i = 0; i < 6; i++){
     println(buildCategory, buildingsInCategory.size());
     image(buildingsInCategory.get(abs((subCategoryScroll+i)%buildingsInCategory.size())).art, -200, 100 * (i+1));
@@ -79,7 +80,7 @@ void drawBuildUI(){
   popMatrix();
 }
 
-
+//Cycles through soundtrack
 void mainGameSoundtrack(){
   if(loaded){
     if(!gameSoundTrack1.isPlaying() && cycle == 1){
@@ -109,11 +110,11 @@ void mainGameSoundtrack(){
       cycle += 1;
     }
   }
-  if(cycle == 2){
+  if(cycle == 5){
     if(!gameSoundTrack5.isPlaying()){
       gameSoundTrack5.play();
     }else if (gameSoundTrack5.percent() >= 98.5){
-      cycle += 1;
+      cycle = 1;
     }
   }
 
