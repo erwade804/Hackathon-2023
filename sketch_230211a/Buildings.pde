@@ -21,25 +21,25 @@ void initbuildings () { // all bulidings to memory
   //buildings.add(new building("woodcutters hut", 10, 10, "", 5, 2, null, color(2, 1, 1), 180, 10, 10, 0, 0, 0));
   //buildings.add(new building("logging industry", 10, 10, "", 10, 6, null, color(2, 2, 2), 700, 450, 300, 70, 0, 0));
   //buildings.add(new building("iron mine", 10, 10, "", 5, 4, null, color(2, 3, 1), 300, 15, 10, 0, 0, 0));
-  //buildings.add(new building("smeltry", 10, 10, "", 10, 6, null, color(2, 4, 2), 800, 350, 250, 400, 0, 100)));
-  //buildings.add(new building("gold mine", 10, 10, "", 5, 4, null, color(2, 5, 1), 150, 15, 0, 15, 0, 0)));
+  //buildings.add(new building("smeltry", 10, 10, "", 10, 6, null, color(2, 4, 2), 800, 350, 250, 400, 0, 100));
+  //buildings.add(new building("gold mine", 10, 10, "", 5, 4, null, color(2, 5, 1), 150, 15, 0, 15, 0, 0));
   
   // government buildings
-  //buildings.add(new building("town hall", 10, 10, "", 0, 0, null, color(250,0,0)));
+  //buildings.add(new building("town hall", 10, 10, "", 0, 0, null, color(250,0,0));
   //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1), 1500, 250, 0, 150, 30, 50));
   maxBuildCategory = 1;
   
   //Wonder
-  buildings.add(new building("presidential Statue", 60, 60, "presidentkiwi.png", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750)));
+  buildings.add(new building("presidential Statue", 60, 60, "presidentkiwi.png", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750));
 
-  //buildings.add(new building("police Station", 10, 10, "", 1, 0, null, color(0, 0, 11)));
-  //buildings.add(new building("fire Station", 10, 10, "", 1, 0, null, color(0, 0, 12)));
-  //buildings.add(new building("medicial Clinic", 10, 10, "", 1, 0, null, color(0, 0, 13)));
-  //buildings.add(new building("hospital", 10, 10, "", 1, 0, null, color(0, 0, 14)));
-  //buildings.add(new building("post Office", 10, 10, "", 1, 0, null, color(0, 0, 16)));
-  //buildings.add(new building("park Trees", 10, 10, "", 1, 0, null, color(0, 0, 17)));
-  //buildings.add(new building("park Fountain", 10, 10, "", 1, 0, null, color(0, 0, 18)));
-  //buildings.add(new building("storage Center", 10, 10, "", 1, 0, null, color(0, 0, 19)));
-  //buildings.add(new building("warehouse", 10, 10, "", 1, 0, null, color(0, 0, 20)));
-  //buildings.add(new building("university", 10, 10, "", 1, 0, null, color(0, 0, 21)));
+  //buildings.add(new building("police Station", 10, 10, "", 1, 0, null, color(0, 0, 11));
+  //buildings.add(new building("fire Station", 10, 10, "", 1, 0, null, color(0, 0, 12));
+  //buildings.add(new building("medicial Clinic", 10, 10, "", 1, 0, null, color(0, 0, 13));
+  //buildings.add(new building("hospital", 10, 10, "", 1, 0, null, color(0, 0, 14));
+  //buildings.add(new building("post Office", 10, 10, "", 1, 0, null, color(0, 0, 16));
+  //buildings.add(new building("park Trees", 10, 10, "", 1, 0, null, color(0, 0, 17));
+  //buildings.add(new building("park Fountain", 10, 10, "", 1, 0, null, color(0, 0, 18));
+  //buildings.add(new building("storage Center", 10, 10, "", 1, 0, null, color(0, 0, 19));
+  //buildings.add(new building("warehouse", 10, 10, "", 1, 0, null, color(0, 0, 20));
+  //buildings.add(new building("university", 10, 10, "", 1, 0, null, color(0, 0, 21));
 }
