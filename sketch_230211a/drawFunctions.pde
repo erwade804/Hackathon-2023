@@ -50,33 +50,33 @@ void hover() {
         building build = buildingsInCategory.get(i % buildingsInCategory.size()); // get selected buliding from mouse click
         fill(71);
         //rect(0, 0, mouseX, mouseY);
-        rect(mouseX-150, mouseY-180, mouseX, mouseY);
+        rect(mouseX-150, mouseY-150, mouseX, mouseY);
         fill(0);
-        text(build.name, mouseX-145, mouseY-170);
+        text(build.name, mouseX-145, mouseY-140);
         int z = 1;
-        text("Money: " + build.price, mouseX-145, mouseY-170+(z*20));
+        text("Money: " + build.price, mouseX-145, mouseY-140+(z*20));
         z++;
         if (build.stonecost > 0) {
-          text("Stone: " + build.stonecost, mouseX-145, mouseY-170+(z*20));
+          text("Stone: " + build.stonecost, mouseX-145, mouseY-140+(z*20));
           z++;
         }
         if (build.woodcost > 0) {
-          text("Wood: " + build.woodcost, mouseX-145, mouseY-170+(z*20));
+          text("Wood: " + build.woodcost, mouseX-145, mouseY-140+(z*20));
           z++;
         }
         if (build.ironcost > 0) {
-          text("Iron: " + build.ironcost, mouseX-145, mouseY-170+(z*20));
+          text("Iron: " + build.ironcost, mouseX-145, mouseY-140+(z*20));
           z++;
         }
         if (build.steelcost > 0) {
-          text("Steel: " + build.steelcost, mouseX-145, mouseY-170+(z*20));
+          text("Steel: " + build.steelcost, mouseX-145, mouseY-140+(z*20));
           z++;
         }
         if (build.plankcost > 0) {
-          text("Planks: " + build.plankcost, mouseX-145, mouseY-170+(z*20));
+          text("Planks: " + build.plankcost, mouseX-145, mouseY-140+(z*20));
           z++;
         }
-        text("Happiness: " + build.happinesscost, mouseX-145, mouseY-170+(z*20));
+        text("Happiness: " + build.happinesscost, mouseX-145, mouseY-140+(z*20));
       }
     }
   }
