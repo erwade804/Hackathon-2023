@@ -1,18 +1,21 @@
 
 
 void keyPressed() { // keyboard mode select switch
-  if (keyPressed) {
-    if (mode == "freeRoam") {
-      freeRoamKeyboard();
-    } else if (mode == "build") {
-      buildModeKeyboard();
-    }
+  if (mode == "freeRoam") {
+    freeRoamKeyboard();
+  } else if (mode == "build") {
+    buildModeKeyboard();
+  } else if (mode == "dialog") {
+    dialogMouse();
   }
 }
 
 
 void mouseClicked() {
   setVolume();
+  if (mode == "dialog") {
+    dialogMouse();
+  }
   if (mode == "freeRoam") {
     freeRoamMouse();
   }
@@ -39,12 +42,16 @@ void freeRoamKeyboard() { // keyboard checks for free roam
     x += scrollSpeed;
   } else if (key == 'd') {
     x -= scrollSpeed;
+  } else if (key == 'b') {
+    changeMode("build");
   }
 }
 
 void buildModeKeyboard() { // keyboard checks for build mode
   if (key == 'w') {
     y += scrollSpeed;
+  } else if (key == 'b') {
+    changeMode("freeRoam");
   } else if (key == 's') {
     y -= scrollSpeed;
   } else if (key == 'a') {
@@ -128,5 +135,21 @@ void buildMouse() {
         selectedBuilding.subPrice();
       }
     }
+  }
+}
+
+void dialogMouse() {
+  if (eventQueue.get(0).nextTrigger != -1) {
+    for (event e : eventQueue) {
+      if (e.triggerId == eventQueue.get(0).nextTrigger) {
+        currentEvent = e;
+        longText = currentEvent.dialog;
+      }
+    }
+  }
+  eventQueue.remove(0);
+  if (eventQueue.size() == 0) {
+    mode = savedDialogMode;
+    return;
   }
 }

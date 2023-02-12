@@ -18,5 +18,9 @@ void drawGame(){
     drawOptions();
     drawProgress();
   }
-  
+  else if(mode == "dialog"){
+    drawGrid();
+    showHover = false;
+    drawDialog();
+  }
 }

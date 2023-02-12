@@ -94,7 +94,9 @@ void drawBuildUI() {
   }
   //Implements an infinit scroll on sub categories
   for (int i = 0; i < 6; i++) {
-    image(buildingsInCategory.get(abs((subCategoryScroll+i)%buildingsInCategory.size())).art, -200, 100 * (i+1));
+    if (buildingsInCategory.size() == 0) {
+    } else
+      image(buildingsInCategory.get(abs((subCategoryScroll+i)%buildingsInCategory.size())).art, -200, 100 * (i+1));
   }
   popMatrix();
 }
@@ -149,31 +151,36 @@ void drawProgress() {
   rect(0, 0, width, 10);
   fill(0, 255, 0);
   rect(0, 0, width*soundLoaded/5, 10);
-  
 }
 
 void drawResourceText() {
-   text(money, 80, 20);
-   //image();
-   text(food, 150, 20);
-   image(foodImg, 100, 6);
-   text(stone, 217, 20);
-   image(stoneImg, 170, 7);
-   text(wood, 290, 20);
-   image(woodImg, 240, 5);
-   text(iron, 360, 20);
-   image(ironImg, 310, 0);
-   text(approval, 430, 20);
-   //image();
-   text(happiness, 500, 20);
-   //image();
-   text(planks, 570, 20);
-   pushMatrix();
-   rotate(PI/2);
-   image(planksImg, 0, -567);
-   popMatrix();
-   text(gold, 640, 20);
-   image(goldImg, 590, 0);
-   text(steel, 710, 20);
-   image(steelImg, 660, 5);
+  textFont(resourceFont);
+  text(money, 80, 20);
+  //image();
+  text(food, 150, 20);
+  image(foodImg, 100, 6);
+  text(stone, 217, 20);
+  image(stoneImg, 170, 7);
+  text(wood, 290, 20);
+  image(woodImg, 240, 5);
+  text(iron, 360, 20);
+  image(ironImg, 310, 0);
+  text(approval, 430, 20);
+  //image();
+  text(happiness, 500, 20);
+  //image();
+  text(planks, 570, 20);
+  pushMatrix();
+  rotate(PI/2);
+  image(planksImg, 0, -567);
+  popMatrix();
+  text(gold, 640, 20);
+  image(goldImg, 590, 0);
+  text(steel, 710, 20);
+  image(steelImg, 660, 5);
+}
+
+void drawDialog() {
+  image(textBox, 0, 0);
+  drawText(longText);
 }

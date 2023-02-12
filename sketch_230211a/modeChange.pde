@@ -1,8 +1,21 @@
-void changeMode(String newMode){
-  if(mode == "mainMenu" && newMode != "options"){
-   menuSoundTrack.stop(); 
+void changeMode(String newMode) {
+  if (mode == "mainMenu" && newMode != "options") {
+    mode = newMode;
+    menuSoundTrack.stop();
+    mode = "dialog";
+    return;
+  }
+  if (newMode == "dialog") {
+    savedDialogMode = mode;
+    mode = newMode;
+  }
+  if (mode == "dialog") {
+    mode = savedDialogMode;
+    savedDialogMode = "freeRoam";
+    return;
   }
   mode = newMode;
+  //mode = newMode;
   //menuSoundTrack.stop();
   //gameSoundTrack1.stop();
   //gameSoundTrack2.stop();
@@ -11,7 +24,7 @@ void changeMode(String newMode){
   //gameSoundTrack5.stop();
 }
 
-void stopAllMusic(){
+void stopAllMusic() {
   menuSoundTrack.stop();
   gameSoundTrack1.stop();
   gameSoundTrack2.stop();
@@ -20,6 +33,6 @@ void stopAllMusic(){
   gameSoundTrack5.stop();
 }
 
-void setVolume(){
+void setVolume() {
   s.volume(volume);
 }
