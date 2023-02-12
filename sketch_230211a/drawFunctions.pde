@@ -1,7 +1,9 @@
 import processing.sound.SoundFile;
 
 void drawGrid(){ // draw's grid
-  //mainGameSoundtrack();
+  if(sound){
+    mainGameSoundtrack();
+  }
   pushMatrix();
   translate(x, y);
   for(int i = 0; i < 10; i++){

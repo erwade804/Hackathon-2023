@@ -1,5 +1,6 @@
 import processing.sound.*;
-
+String mode = "build";
+boolean sound = false;
 // global variables
 //player camera position
 int x = 0;
@@ -43,7 +44,6 @@ int months = 0;
 int days = 0;
 
 // states
-String mode = "build";
 boolean showHover = true;
 
 // memory access
