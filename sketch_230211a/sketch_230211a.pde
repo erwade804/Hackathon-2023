@@ -11,7 +11,7 @@ int cycle = 1;
 boolean loaded = false;
 int soundLoaded = 0;
 boolean stopped = false;
-float volume = .005;
+float volume = .3; // max volume is .3
 Sound s;
 
 // selected build
@@ -26,17 +26,17 @@ building selectedBuilding;
 int stone = 0;
 int wood = 0;
 int food = 0;
-int money = 0;
+int money = 500;
 int steel = 0;
 int planks = 0;
 int happiness = 0;
 int approval = 0;
 
 // constants
-int mapWidth = 10;
-int mapHeight = 10;
-int scrollSpeed = 10;
-int unitSize = 50;
+static int mapWidth = 10;
+static int mapHeight = 10;
+static int scrollSpeed = 10;
+static int unitSize = 50;
 
 // time
 int year = 0;

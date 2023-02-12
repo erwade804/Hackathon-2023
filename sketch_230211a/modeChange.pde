@@ -2,7 +2,6 @@ void changeMode(String newMode){
   if(mode == "mainMenu" && newMode != "options"){
    menuSoundTrack.stop(); 
   }
-  println(newMode);
   mode = newMode;
   //menuSoundTrack.stop();
   //gameSoundTrack1.stop();

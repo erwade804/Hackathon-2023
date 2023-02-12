@@ -1,16 +1,16 @@
 void initbuildings () { // all bulidings to memory
   // population
-  buildings.add(new building("shack", 1, 1, "shack.png", 1, 0, null, color(0, 0, 1)));
+  buildings.add(new building("shack", 1, 1, "shack.png", 1, 0, null, color(0, 0, 1), 5));
   buildings.get(0).art.resize(50, 50);
-  buildings.add(new building("family house", 2, 2, "familyHouse.png", 1, 0, null, color(0, 1, 2)));
+  buildings.add(new building("family house", 2, 2, "familyHouse.png", 1, 0, null, color(0, 1, 2), 5));
   buildings.get(1).art.resize(50, 50);
-  buildings.add(new building("fancy house", 10, 10, "fancyHouse.png", 1, 0, null, color(0, 2, 3)));
+  buildings.add(new building("fancy house", 10, 10, "fancyHouse.png", 1, 0, null, color(0, 2, 3), 5));
   buildings.get(2).art.resize(50, 50);
-  buildings.add(new building("mansion", 10, 10, "mansion.png", 1, 0, null, color(0, 3, 4)));
+  buildings.add(new building("mansion", 10, 10, "mansion.png", 1, 0, null, color(0, 3, 4), 5));
   buildings.get(3).art.resize(50, 50);
   
   // food
-  buildings.add(new building("fishing wharf", 10, 10, "shack.png", 1, 0, null, color(1, 0, 1)));
+  buildings.add(new building("fishing wharf", 10, 10, "shack.png", 1, 0, null, color(1, 0, 1), 5));
   buildings.get(4).art.resize(50, 50);
   //// not linked
   //buildings.add(new building("farms", 10, 10, "", 1, 0, null, color(1, 1, 1)));

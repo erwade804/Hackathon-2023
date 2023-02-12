@@ -15,6 +15,10 @@ class Map{
       this.mapImage.save(FILENAME);
     }
   }
+  
+  void renderMap(){
+    
+  }
 }
 
 Map createMap(int x, int y){
@@ -38,16 +42,21 @@ Map loadMap(int x, int y){
 }
 
 void drawMap(Map map){
-  map.mapImage.loadPixels();
-  for(int i = 0; i < mapWidth; i++){
-    for(int j = 0; j < mapHeight; j++){
-      // draw the building it is
-      for(building a: buildings){
-        println(a.mapColor);
-        //if(map.mapImage.pixels[i*mapWidth][j] == a.mapColor){
-        //}
-        a.art.resize(50, 50);
-        image(a.art, i*mapWidth, i*mapHeight);
+  if(map != null){
+    noFill();
+    map.mapImage.loadPixels();
+    for(int i = 0; i < mapWidth; i++){
+      for(int j = 0; j < mapHeight; j++){
+        // draw the building it is
+        pushMatrix();
+        translate(x+map.miniMapCords.x*500, y+map.miniMapCords.y*500);
+        for(building a: buildings){
+          rect(j*unitSize, i*unitSize, (j+1)*unitSize, (i+1)*unitSize);
+          if(map.mapImage.pixels[i*mapWidth + j] == a.mapColor){
+            image(a.art, j*unitSize, i*unitSize);
+          }
+        }
+        popMatrix();
       }
     }
   }
