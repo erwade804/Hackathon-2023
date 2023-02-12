@@ -26,7 +26,7 @@ void initbuildings () { // all bulidings to memory
   
   // government buildings
   //buildings.add(new building("townHall", 10, 10, "", 0, 0, null, color(250,0,0)));
-  //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1)));
+  //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1), 1500, 250, 0, 150, 30, 50));
   maxBuildCategory = 1;
   
   //Wonder
