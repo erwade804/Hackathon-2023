@@ -1,32 +1,7 @@
 import processing.sound.SoundFile;
 
 void drawGrid(){ // draw's grid
-  if(!gameSoundTrack1.isPlaying() && cycle == 1){
-    gameSoundTrack1.rate(1.75);
-    gameSoundTrack1.play();
-  } else if (gameSoundTrack1.percent() >= 98.5){
-    cycle += 1;
-  }
-  if(!gameSoundTrack2.isPlaying() && cycle == 2){
-    gameSoundTrack2.play();
-  } else if (gameSoundTrack2.percent() >= 98.5){
-    cycle += 1;
-  }
-  if(!gameSoundTrack3.isPlaying() && cycle == 3){
-    gameSoundTrack3.play();
-  } else if (gameSoundTrack3.percent() >= 98.5){
-    cycle += 1;
-  }
-  if(!gameSoundTrack4.isPlaying() && cycle == 4){
-    gameSoundTrack4.play();
-  } else if (gameSoundTrack4.percent() >= 98.5){
-    cycle += 1;
-  }
-  if(!gameSoundTrack5.isPlaying() && cycle == 5){
-    gameSoundTrack5.play();
-  } else if (gameSoundTrack5.percent() >= 98.5){
-    cycle = 1;
-  }
+  //mainGameSoundtrack();
   pushMatrix();
   translate(x, y);
   for(int i = 0; i < 10; i++){
@@ -56,16 +31,20 @@ void hover(){
     fill(0,0,255);
     pushMatrix();
     translate(x, y);
-    rect(squarex*unitSize, squarey*unitSize, squarex*unitSize+unitSize, squarey*unitSize+unitSize); // draw square
+    //image()// get building.art
+    if(selectedBuilding != null){
+      image(selectedBuilding.art, squarex*unitSize, squarey*unitSize);
+    }
+    //rect(squarex*unitSize, squarey*unitSize, squarex*unitSize+unitSize, squarey*unitSize+unitSize); // draw square
     popMatrix();
     noFill();
   }
 }
 
 void drawMenu(){
-  background(#305170);
+  background(#87ceeb);
   if(!menuSoundTrack.isPlaying()){
-    menuSoundTrack.loop();
+    menuSoundTrack.play();
   }
   image(startbutton, width/2-200, 100);
   image(optionsbutton, width/2-200, 300);
@@ -85,5 +64,68 @@ void drawBuildUI(){
   rect(-330, 20, -300, 50, 18, 0, 0, 18);
   triangle(-43, 27, -43, 42, -28, 35);
   triangle(-307, 27, -307, 42, -322, 35);
+  // top right is origin
+  // find the buildings in category
+  ArrayList <building> buildingsInCategory = new ArrayList<building>();
+  for(building a: buildings){
+    if (red(a.mapColor) == buildCategory){
+      buildingsInCategory.add(a);
+    }
+  }
+  for(int i = 0; i < 6; i++){
+    println(buildCategory, buildingsInCategory.size());
+    image(buildingsInCategory.get(abs((subCategoryScroll+i)%buildingsInCategory.size())).art, -200, 100 * (i+1));
+  }
   popMatrix();
+}
+
+
+void mainGameSoundtrack(){
+  if(loaded){
+    if(!gameSoundTrack1.isPlaying() && cycle == 1){
+      gameSoundTrack1.play();
+    } else if (gameSoundTrack1.percent() >= 98.5){
+      cycle += 1;
+    }
+  }
+  if(cycle == 2){
+    if(!gameSoundTrack2.isPlaying()){
+      gameSoundTrack2.play();
+    }else if (gameSoundTrack2.percent() >= 98.5){
+      cycle += 1;
+    }
+  }
+  if(cycle == 3){
+    if(!gameSoundTrack3.isPlaying()){
+      gameSoundTrack3.play();
+    }else if (gameSoundTrack3.percent() >= 98.5){
+      cycle += 1;
+    }
+  }
+  if(cycle == 4){
+    if(!gameSoundTrack4.isPlaying()){
+      gameSoundTrack4.play();
+    }else if (gameSoundTrack4.percent() >= 98.5){
+      cycle += 1;
+    }
+  }
+  if(cycle == 2){
+    if(!gameSoundTrack5.isPlaying()){
+      gameSoundTrack5.play();
+    }else if (gameSoundTrack5.percent() >= 98.5){
+      cycle += 1;
+    }
+  }
+
+}
+
+void drawOptions(){ // put options here :P
+  image(exitbutton, width/2-200, 500);
+}
+
+void drawProgress(){
+  fill(51);
+  rect(0, 0, width, 10);
+  fill(0, 255, 0);
+  rect(0, 0, width*soundLoaded/5, 10);
 }

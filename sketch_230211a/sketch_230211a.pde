@@ -1,9 +1,20 @@
-import processing.sound.SoundFile;
+import processing.sound.*;
 
 // global variables
 int x = 0;
 int y = 0;
 int cycle = 1;
+int buildCategory = 0;
+int maxBuildCategory = 0;
+int subCategoryScroll = 0;
+boolean loaded = false;
+int soundLoaded = 0;
+boolean stopped = false;
+float volume = .005;
+Sound s;
+
+// selected build
+building selectedBuilding;
 
 // resources
 int stone = 0;
@@ -49,16 +60,12 @@ void setup(){ // before the game starts
   fullScreen();
   noFill();
   menuSoundTrack = new SoundFile(this, "menu-music.mp3");
-  gameSoundTrack1 = new SoundFile(this, "Track1.mp3");
-  gameSoundTrack2 = new SoundFile(this, "Track2.mp3");
-  gameSoundTrack3 = new SoundFile(this, "Track3.mp3");
-  gameSoundTrack4 = new SoundFile(this, "Track4.mp3");
-  gameSoundTrack5 = new SoundFile(this, "Track5.mp3");
-
-  startbutton = loadSprite("start.png");
+  thread("threadIt");
+  startbutton = loadSprite("grayStart.png");
   optionsbutton = loadSprite("options.png");
   exitbutton = loadSprite("exit.png");
-
+  s = new Sound(this);
+  s.volume(volume);
   stroke(255, 255, 255);
   rectMode(CORNERS); // used for rect
   initbuildings();
@@ -69,11 +76,22 @@ void setup(){ // before the game starts
   }
 }
 
+void threadIt(){ // 
+  gameSoundTrack1 = new SoundFile(this, "Track1.mp3");
+  soundLoaded++;
+  startbutton = loadSprite("start.png");
+  loaded = true;
+  gameSoundTrack2 = new SoundFile(this, "Track2.mp3");
+  soundLoaded++;
+  gameSoundTrack3 = new SoundFile(this, "Track3.mp3");
+  soundLoaded++;
+  gameSoundTrack4 = new SoundFile(this, "Track4.mp3");
+  soundLoaded++;
+  gameSoundTrack5 = new SoundFile(this, "Track5.mp3");
+  soundLoaded++;
+}
+
 void draw(){
-  keyboardInput();
   background(34,177,35);
   drawGame();
-  //PImage img = buildings.get(0).art;
-  //img.resize(50,50);
-  //image(img, 0, 0);
 }

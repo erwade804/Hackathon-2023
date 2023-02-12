@@ -10,5 +10,11 @@ void drawGame(){
   }
   else if(mode == "mainMenu"){
     drawMenu();
+    drawProgress();
   }
+  else if(mode == "options"){
+    drawOptions();
+    drawProgress();
+  }
+  
 }
