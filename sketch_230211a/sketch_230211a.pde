@@ -23,14 +23,15 @@ int subCategoryScroll = 0;
 building selectedBuilding;
 
 // resources
-int stone = 0;
-int wood = 0;
-int food = 0;
-int money = 500;
+int stone = 50;
+int iron = 50;
+int wood = 100;
+int food = 75;
+int money = 400;
 int steel = 0;
 int planks = 0;
-int happiness = 0;
-int approval = 0;
+int happiness = 10;
+int approval = 30;
 
 // constants
 static int mapWidth = 10;

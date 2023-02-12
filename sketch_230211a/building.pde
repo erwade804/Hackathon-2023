@@ -9,9 +9,10 @@ class building {
  color mapColor;
  String description;
  String filePath;
- int price;
+ //int[6] costarray;
+ int price, stonecost, woodcost, ironcost, steelcost, plankcost;
 
-  building(String namecreate, int blengthcreate, int bwidthcreate, String artFilePath, int yieldcreate, int upkeepcreate, PVector locationcreate, color mapColors, int price_){
+  building(String namecreate, int blengthcreate, int bwidthcreate, String artFilePath, int yieldcreate, int upkeepcreate, PVector locationcreate, color mapColors, int price_, int stone, int wood, int iron, int steel, int plank){
     name = namecreate;
     blength = blengthcreate;
     bwidth = bwidthcreate;
@@ -21,7 +22,13 @@ class building {
     location = locationcreate;
     mapColor = mapColors;
     art = loadSprite(filePath);
+    //costarray = costs;
     price = price_;
+    stonecost = stone;
+    woodcost = wood;
+    ironcost = iron;
+    steelcost = steel;
+    plankcost = plank;
   }
   
   void setDescription(String paragraph){
