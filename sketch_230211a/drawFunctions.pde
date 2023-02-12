@@ -148,7 +148,7 @@ void mainGameSoundtrack() {
   if (loaded) {
     if (!gameSoundTrack1.isPlaying() && cycle == 1) {
       gameSoundTrack1.play();
-    } else if (gameSoundTrack1.percent() >= 98.5) {
+    } else if (gameSoundTrack1.percent() >= 98.5 && cycle == 1) {
       cycle += 1;
     }
   } else {
