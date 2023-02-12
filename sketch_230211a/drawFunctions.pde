@@ -17,6 +17,16 @@ void drawGrid(){ // draw's grid
   } else if (gameSoundTrack3.percent() >= 98.5){
     cycle += 1;
   }
+  if(!gameSoundTrack4.isPlaying() && cycle == 4){
+    gameSoundTrack4.play();
+  } else if (gameSoundTrack4.percent() >= 98.5){
+    cycle += 1;
+  }
+  if(!gameSoundTrack5.isPlaying() && cycle == 5){
+    gameSoundTrack5.play();
+  } else if (gameSoundTrack5.percent() >= 98.5){
+    cycle = 1;
+  }
   pushMatrix();
   translate(x, y);
   for(int i = 0; i < 10; i++){
