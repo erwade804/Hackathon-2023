@@ -38,6 +38,60 @@ void drawGrid() { // draw's grid
 
 //For hover icon
 void hover() {
+  if (mouseX > width-200 && mouseX < width-150) { // selection's x range
+      for (int i = 0; i< 6; i++) {
+        if (mouseY > 100*(i+1) && mouseY < 100*(i+1) + 50) { // 6 individual y ranges (repeating if more than 6)
+          ArrayList <building> buildingsInCategory = new ArrayList<building>(); // allowed buildings in category
+          for (building a : buildings) {
+            if (red(a.mapColor) == buildCategory) { // if the building is in the category, add it to the list of allowed buildings
+              buildingsInCategory.add(a);
+            }
+          }
+          selectedBuilding = buildingsInCategory.get(i % buildingsInCategory.size()); // get selected buliding from mouse click
+          rect(mouseX-150, mouseY-180, mouseX, mouseY);
+          fill(71);
+          text(selectedBuilding.name, mouseX-145, mouseY-170);
+          int z = 1;
+          text("Money: " + selectedBuilding.price.toString(), mouseX-145, mouseY-170+(z*20));
+          z++;
+          if(selectedBuilding.stonecost > 0){
+            text("Stone: " + selectedBuilding.stonecost.toString(), mouseX-145, mouseY-170+(z*20));
+            z++;
+          }
+          if(selectedBuilding.woodcost > 0){
+            text("Wood: " + selectedBuilding.woodcost.toString(), mouseX-145, mouseY-170+(z*20));
+            z++;
+          }
+          if(selectedBuilding.ironcost > 0){
+            text("Iron: " + selectedBuilding.ironcost.toString(), mouseX-145, mouseY-170+(z*20));
+            z++;
+          }
+          if(selectedBuilding.steelcost > 0){
+            text("Steel: " + selectedBuilding.steelcost.toString(), mouseX-145, mouseY-170+(z*20));
+            z++;
+          }
+          if(selectedBuilding.plankcost > 0){
+            text("Planks: " + selectedBuilding.plankcost.toString(), mouseX-145, mouseY-170+(z*20));
+            z++;
+          }
+          text("Happiness: " + selectedBuilding.happinesscost.toString(), mouseX-145, mouseY-170+(z*20));
+     
+        }
+      }
+    }
+          /*
+            Display Building Name: 
+            Display Price:
+            Display Stone:
+            Display Wood:
+            Display Iron:
+            Display Steel:
+            Display Planks:
+            Display Happiness:
+          */
+        }
+      }
+    }
   // hover if needs to show hover
   if (showHover) {
     int newx = mouseX -x; // newx newy for map position in world not screen
@@ -47,7 +101,7 @@ void hover() {
     int squarex = newx/unitSize; // which square the mouse is on
     int squarey = newy/unitSize;
     fill(0, 0, 255);
-
+    
     //println(mapx, mapy);
     pushMatrix();
     translate(x, y);
