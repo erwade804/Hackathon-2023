@@ -30,7 +30,7 @@ void initbuildings () { // all bulidings to memory
   maxBuildCategory = 1;
   
   //Wonder
-  buildings.add(new building("presidential Statue", 60, 60, "presidentkiwi.png", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750);
+  buildings.add(new building("presidential Statue", 60, 60, "presidentkiwi.png", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750)));
 
   //buildings.add(new building("police Station", 10, 10, "", 1, 0, null, color(0, 0, 11)));
   //buildings.add(new building("fire Station", 10, 10, "", 1, 0, null, color(0, 0, 12)));
