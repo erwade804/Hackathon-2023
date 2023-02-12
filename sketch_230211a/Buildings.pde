@@ -11,10 +11,10 @@ void initbuildings () { // all bulidings to memory
   buildings.get(3).art.resize(50, 50);
   
   // food
-  buildings.add(new building("fishing wharf", 10, 10, "shack.png", 3, 1, null, color(1, 0, 1), 200, 15, 15, 0, 0, 0));
-  buildings.get(4).art.resize(50, 50);
-  //// not linked
-  //buildings.add(new building("farms", 10, 10, "", 1, 0, null, color(1, 1, 1), 150, 0, 20, 0, 0, 0));
+  buildings.add(new building("farm", 10, 10, "farmHouse.png", 1, 0, null, color(1, 0, 1), 150, 0, 20, 0, 0, 0));
+  buildings.add(new building("fishing wharf", 10, 10, "fishingWharf.png", 3, 1, null, color(1, 1, 1), 200, 15, 15, 0, 0, 0));
+  buildings.get(5).art.resize(50, 50);
+  
   
   // resources, not linked
   //buildings.add(new building("stone quarry", 10, 10, "", 5, 2, null, color(2, 0, 1), 200, 0, 10, 15, 0, 0));
@@ -25,22 +25,21 @@ void initbuildings () { // all bulidings to memory
   //buildings.add(new building("gold mine", 10, 10, "", 5, 4, null, color(2, 5, 1), 150, 15, 0, 15, 0, 0)));
   
   // government buildings
-  //buildings.add(new building("townHall", 10, 10, "", 0, 0, null, color(250,0,0)));
+  //buildings.add(new building("town hall", 10, 10, "", 0, 0, null, color(250,0,0)));
   //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1), 1500, 250, 0, 150, 30, 50));
   maxBuildCategory = 1;
   
   //Wonder
-  //buildings.add(new building("presidentialStatue", 60, 60, "presidentkiwi.png", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750);
+  buildings.add(new building("presidential Statue", 60, 60, "presidentkiwi.png", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750);
 
-  //buildings.add(new building("policeStation", 10, 10, "", 1, 0, null, color(0, 0, 11)));
-  //buildings.add(new building("fireStation", 10, 10, "", 1, 0, null, color(0, 0, 12)));
-  //buildings.add(new building("medicialClinic", 10, 10, "", 1, 0, null, color(0, 0, 13)));
+  //buildings.add(new building("police Station", 10, 10, "", 1, 0, null, color(0, 0, 11)));
+  //buildings.add(new building("fire Station", 10, 10, "", 1, 0, null, color(0, 0, 12)));
+  //buildings.add(new building("medicial Clinic", 10, 10, "", 1, 0, null, color(0, 0, 13)));
   //buildings.add(new building("hospital", 10, 10, "", 1, 0, null, color(0, 0, 14)));
-  //buildings.add(new building("townHall", 10, 10, "", 1, 0, null, color(0, 0, 15)));
-  //buildings.add(new building("postOffice", 10, 10, "", 1, 0, null, color(0, 0, 16)));
-  //buildings.add(new building("parkTrees", 10, 10, "", 1, 0, null, color(0, 0, 17)));
-  //buildings.add(new building("parkFountain", 10, 10, "", 1, 0, null, color(0, 0, 18)));
-  //buildings.add(new building("storageCenter", 10, 10, "", 1, 0, null, color(0, 0, 19)));
+  //buildings.add(new building("post Office", 10, 10, "", 1, 0, null, color(0, 0, 16)));
+  //buildings.add(new building("park Trees", 10, 10, "", 1, 0, null, color(0, 0, 17)));
+  //buildings.add(new building("park Fountain", 10, 10, "", 1, 0, null, color(0, 0, 18)));
+  //buildings.add(new building("storage Center", 10, 10, "", 1, 0, null, color(0, 0, 19)));
   //buildings.add(new building("warehouse", 10, 10, "", 1, 0, null, color(0, 0, 20)));
   //buildings.add(new building("university", 10, 10, "", 1, 0, null, color(0, 0, 21)));
 }
