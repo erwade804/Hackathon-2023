@@ -10,9 +10,9 @@ class building {
   String description;
   String filePath;
   //int[6] costarray;
-  int price, stonecost, woodcost, ironcost, steelcost, plankcost;
+  int price, stonecost, woodcost, ironcost, steelcost, plankcost, happinesscost;
 
-  building(String namecreate, int blengthcreate, int bwidthcreate, String artFilePath, int yieldcreate, int upkeepcreate, PVector locationcreate, color mapColors, int price_, int stone, int wood, int iron, int steel, int plank) {
+  building(String namecreate, int blengthcreate, int bwidthcreate, String artFilePath, int yieldcreate, int upkeepcreate, PVector locationcreate, color mapColors, int price_, int stone, int wood, int iron, int steel, int plank, int happy) {
     name = namecreate;
     blength = blengthcreate;
     bwidth = bwidthcreate;
@@ -29,6 +29,7 @@ class building {
     ironcost = iron;
     steelcost = steel;
     plankcost = plank;
+    happinesscost = happy;
   }
 
   void setDescription(String paragraph) {
