@@ -32,8 +32,8 @@ void initbuildings () { // all bulidings to memory
   buildings.get(9).art.resize(50, 50);
   
   // government buildings
-  //buildings.add(new building("town hall", 10, 10, "", 0, 0, null, color(250,0,0), 0, 0, 0, 0, 0, 0, 0));
-  //buildings.get(9).art.resize(150, 150);
+  buildings.add(new building("town hall", 10, 10, "Townhall.png", 0, 0, null, color(250,0,0), 0, 0, 0, 0, 0, 0, 0));
+  buildings.get(10).art.resize(150, 150);
   //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1), 1500, 250, 0, 150, 30, 50, -3));
   //buildings.get(9).art.resize(100, 100);
   maxBuildCategory = 1;
@@ -46,8 +46,8 @@ void initbuildings () { // all bulidings to memory
   //buildings.get(10).art.resize(50, 100);
   //buildings.add(new building("fire Station", 10, 10, "", 1, 0, null, color(0, 0, 12), 0, 0, 0, 0, 0, 0, -3));
   //buildings.get(10).art.resize(50, 100);
-  //buildings.add(new building("medicial Clinic", 10, 10, "", 1, 0, null, color(0, 0, 13), 0, 0, 0, 0, 0, 0, -3));
-  //buildings.get(10).art.resize(50, 100);
+  buildings.add(new building("medicial Clinic", 10, 10, "Clinic.png", 1, 0, null, color(0, 0, 13), 0, 0, 0, 0, 0, 0, -3));
+  buildings.get(11).art.resize(50, 100);
   //buildings.add(new building("hospital", 10, 10, "", 1, 0, null, color(0, 0, 14), 0, 0, 0, 0, 0, 0, 0));
   //buildings.add(new building("post Office", 10, 10, "", 1, 0, null, color(0, 0, 16), 0, 0, 0, 0, 0, 0, -2));
   //buildings.get(10).art.resize(50, 100);
