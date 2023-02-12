@@ -1,0 +1,18 @@
+body {
+  background-color: skyblue;
+  opacity: 0.78;
+}
+
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10vw;
+  margin: 10px;
+  text-align: center;
+  color: blue;
+}
+
+.disclaimer{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
