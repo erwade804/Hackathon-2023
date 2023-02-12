@@ -1,13 +1,15 @@
 import processing.sound.SoundFile;
 
 void drawGrid(){ // draw's grid
-int cycle = 1;
   if(!gameSoundTrack1.isPlaying() && cycle == 1){
+    gameSoundTrack1.rate(1.75);
     gameSoundTrack1.play();
-    cycle++;
-  } else if(!gameSoundTrack2.isPlaying() && cycle == 2){
+  } else if (gameSoundTrack1.percent() >= 98.5){
+    cycle += 1;
+  }
+  if(!gameSoundTrack2.isPlaying() && cycle == 2){
     gameSoundTrack2.play();
-    cycle++;
+    cycle += 1;
   }
   pushMatrix();
   translate(x, y);
@@ -51,4 +53,18 @@ void drawMenu(){
   
   
   
+}
+
+
+
+void drawBuildUI(){
+  pushMatrix();
+  translate(width, 0);
+  fill(72);
+  rect(0, 0, -350, height);
+  fill(51);
+  rect(-300, 50, -50, 20);
+  rect(-50, 20, -20, 50, 0, 18, 18, 0);
+  rect(-330, 20, -300, 50, 18, 0, 0, 18);
+  popMatrix();
 }

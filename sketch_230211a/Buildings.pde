@@ -6,9 +6,9 @@ void initbuildings () { // all bulidings to memory
   buildings.add(new building("mansion", 10, 10, "", 1, 0, null, color(0, 0, 4)));
   
   // food
-  buildings.add(new building("fishing wharf", 10, 10, "", 1, 0, null, color(0, 1, 1)));
+  buildings.add(new building("fishing wharf", 10, 10, "", 1, 0, null, color(1, 1, 1)));
   // not linked
-  buildings.add(new building("farms", 10, 10, "", 1, 0, null, color(0, 2, 1)));
+  buildings.add(new building("farms", 10, 10, "", 1, 0, null, color(1, 2, 1)));
   
   // resources, not linked
   buildings.add(new building("stone quarry", 10, 10, "", 1, 0, null, color(0, 3, 1)));

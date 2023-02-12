@@ -3,6 +3,7 @@ import processing.sound.SoundFile;
 // global variables
 int x = 0;
 int y = 0;
+int cycle = 1;
 
 // resources
 int stone = 0;
@@ -26,7 +27,7 @@ int months = 0;
 int days = 0;
 
 // states
-String mode = "mainMenu";
+String mode = "build";
 boolean showHover = true;
 
 // memory access

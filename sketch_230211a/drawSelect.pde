@@ -5,6 +5,7 @@ void drawGame(){
   }
   else if(mode == "build"){
     drawGrid();
+    drawBuildUI();
     showHover = true;
   }
   else if(mode == "mainMenu"){
