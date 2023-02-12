@@ -1,5 +1,5 @@
 import processing.sound.*;
-String mode = "build";
+String mode = "mainMenu";
 boolean sound = false;
 // global variables
 //player camera position
@@ -11,7 +11,7 @@ int cycle = 1;
 boolean loaded = false;
 int soundLoaded = 0;
 boolean stopped = false;
-float volume = .3; // max volume is .3
+float volume = .35; // max volume is .3
 Sound s;
 
 // selected build

@@ -25,6 +25,7 @@ void initbuildings () { // all bulidings to memory
   //buildings.add(new building("gold mine", 10, 10, "", 5, 4, null, color(2, 5, 1), 150, 15, 0, 15, 0, 0)));
   
   // government buildings
+  //buildings.add(new building("townHall", 10, 10, "", 0, 0, null, color(250,0,0)));
   //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1)));
   maxBuildCategory = 1;
   
