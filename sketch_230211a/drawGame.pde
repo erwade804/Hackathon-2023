@@ -8,6 +8,7 @@ void drawGame(){
     drawGrid();
     drawBuildUI();
     showHover = true;
+    drawResourceText();
   }
   else if(mode == "mainMenu"){
     drawMenu();

@@ -116,18 +116,17 @@ void buildMouse() {
     }
   } else { // not in overlay (must have building selected for anything to happen)
     if (selectedBuilding != null) {
-      int newx = mouseX-x; // newx newy for map position in world not screen
-      int newy = mouseY-y;
-      int mapx = newx/(mapWidth*unitSize); // which map the mouse is on
-      int mapy = newy/(mapHeight*unitSize);
-      int squarex = newx/unitSize%mapWidth; // which square the mouse is on
-      int squarey = newy/unitSize%mapHeight;
-      maps[mapx][mapy].mapImage.loadPixels();
-      maps[mapx][mapy].mapImage.pixels[squarey*mapWidth + squarex] = selectedBuilding.mapColor;
+      if (selectedBuilding.canAfford()) {
+        int newx = mouseX-x; // newx newy for map position in world not screen
+        int newy = mouseY-y;
+        int mapx = newx/(mapWidth*unitSize); // which map the mouse is on
+        int mapy = newy/(mapHeight*unitSize);
+        int squarex = newx/unitSize%mapWidth; // which square the mouse is on
+        int squarey = newy/unitSize%mapHeight;
+        maps[mapx][mapy].mapImage.loadPixels();
+        maps[mapx][mapy].mapImage.pixels[squarey*mapWidth + squarex] = selectedBuilding.mapColor;
+        selectedBuilding.subPrice();
+      }
     }
   }
-  // select build
-  // if build selected check price
-  // check valid square
-  // place building
 }

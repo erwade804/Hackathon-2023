@@ -29,6 +29,7 @@ int wood = 100;
 int food = 75;
 int money = 400;
 int steel = 0;
+int gold = 0;
 int planks = 0;
 int happiness = 10;
 int approval = 30;
@@ -62,6 +63,9 @@ SoundFile gameSoundTrack5;
 // buttons
 PImage startbutton, optionsbutton, exitbutton;
 
+// resourceImages
+PImage goldImg, ironImg, moneyImg, planksImg, steelImg, approvalImg, happinessImg, stoneImg, woodImg, foodImg; 
+
 void setup(){ // before the game starts
   fullScreen();
   noFill();
@@ -70,6 +74,13 @@ void setup(){ // before the game starts
   startbutton = loadSprite("grayStart.png");
   optionsbutton = loadSprite("options.png");
   exitbutton = loadSprite("exit.png");
+  goldImg = loadSprite("Gold.png");
+  ironImg = loadSprite("Iron.png");
+  planksImg = loadSprite("Planks.png");
+  steelImg = loadSprite("Steel.png");
+  stoneImg = loadSprite("Stone.png");
+  woodImg = loadSprite("Wood.png");
+  foodImg = loadSprite("Bread.png");
   s = new Sound(this);
   s.volume(volume);
   stroke(255, 255, 255);
