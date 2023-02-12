@@ -22,11 +22,11 @@ void initbuildings () { // all bulidings to memory
   buildings.get(6).art.resize(50, 50);
   buildings.add(new building("woodcutters hut", 10, 10, "WoodHut.png", 5, 2, null, color(2, 1, 1), 180, 10, 10, 0, 0, 0, 0));
   buildings.get(7).art.resize(50, 50);
-  //buildings.add(new building("logging industry", 10, 10, "", 10, 6, null, color(2, 2, 2), 700, 450, 300, 70, 0, 0, 3));
+  //buildings.add(new building("logging industry", 10, 10, "", 12, 6, null, color(2, 2, 2), 700, 450, 300, 70, 0, 0, 10));
   //buildings.get(7).art.resize(100, 100);
   buildings.add(new building("iron mine", 10, 10, "Ironmine.png", 5, 4, null, color(2, 3, 1), 300, 15, 10, 0, 0, 0, 2));
   buildings.get(8).art.resize(50, 50);
-  //buildings.add(new building("smeltry", 10, 10, "", 10, 6, null, color(2, 4, 2), 800, 350, 250, 400, 0, 100, 5));
+  //buildings.add(new building("smeltry", 10, 10, "", 15, 6, null, color(2, 4, 2), 800, 350, 250, 400, 0, 100, 15));
   //buildings.get(7).art.resize(100, 100);
   buildings.add(new building("gold mine", 10, 10, "Goldmine.png", 5, 4, null, color(2, 5, 1), 150, 15, 0, 15, 0, 0, 1));
   buildings.get(9).art.resize(50, 50);
