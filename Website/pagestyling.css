@@ -1,57 +1,102 @@
-* {
-  box-sizing: border-box;
+html {
+    background-image: url(website%20background.jpg);
+    background-color: rgba(255,255,255,0.9);
+    background-size: cover;
+
 }
 
-body {
-  background-color: skyblue;
-  opacity: 0.78;
+body{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
 }
 
 header{
-  padding: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 10vw;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+
+section {
+  background-color: whitesmoke;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+h1{ 
+  font-family: 'Poppins';
+  font-weight: 200;
+  font-size: 8em;
   margin: 10px;
   text-align: center;
-  color: blue;
-  background-color: antiquewhite;
+  color: whitesmoke;
 }
 
-/*.row{
-  display: flex;
-} */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
+p {
+  font-family: 'Poppins', sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 10px;
+h3 {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.first-column {
+    background-color: whitesmoke;
+    width: 73%;
+    float: left;
+    
 }
 
-#disclaimer{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 300;
-  font-size: small;
-  bottom: 0;
-  width: 100%;
-  background-color: deepskyblue;
+.second-column {
+    background-color: whitesmoke;
+    width: 23%;
+    float: right;
+    padding-left: 10px;
 }
 
+@media only screen and (max-width: 800px) {
 
-/*@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-} */
+   .first-column {
+        width: 100%;
+        padding-bottom: 10px;
+        float: none;
+    }
+
+    .second-column {
+        width: 100%;
+        padding-bottom: 10px;
+        float: none;
+    }
+    
+}
+
+footer{
+    width: 90%;
+    background: rgba(1,1,1,0.5);
+    position: absolute;
+    bottom: 0px;
+    padding-top: 10px;  
+    display: block;
+    clear: both;
+    color: whitesmoke;
+    align-content: center;
+    margin: auto;
+}
+
+footer p{
+    padding: 0px;
+    margin: auto;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: lightpink
+}
