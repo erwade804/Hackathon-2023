@@ -27,20 +27,23 @@ int months = 0;
 int days = 0;
 
 // states
-String mode = "build";
+String mode = "mainMenu";
 boolean showHover = true;
 
 // memory access
 Map[][] maps = new Map[mapWidth][mapHeight];
 ArrayList<building> buildings = new ArrayList <building>();
 
-//Music
+//  Music
 SoundFile menuSoundTrack;
 SoundFile gameSoundTrack1;
 SoundFile gameSoundTrack2;
 SoundFile gameSoundTrack3;
 SoundFile gameSoundTrack4;
 SoundFile gameSoundTrack5;
+
+// buttons
+PImage startbutton, optionsbutton, exitbutton;
 
 void setup(){ // before the game starts
   fullScreen();
@@ -51,6 +54,11 @@ void setup(){ // before the game starts
   gameSoundTrack3 = new SoundFile(this, "Track3.mp3");
   gameSoundTrack4 = new SoundFile(this, "Track4.mp3");
   gameSoundTrack5 = new SoundFile(this, "Track5.mp3");
+
+  startbutton = loadSprite("start.png");
+  optionsbutton = loadSprite("options.png");
+  exitbutton = loadSprite("exit.png");
+
   stroke(255, 255, 255);
   rectMode(CORNERS); // used for rect
   initbuildings();

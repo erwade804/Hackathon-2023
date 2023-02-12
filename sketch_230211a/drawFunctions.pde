@@ -53,12 +53,13 @@ void hover(){
 }
 
 void drawMenu(){
+  background(#305170);
   if(!menuSoundTrack.isPlaying()){
     menuSoundTrack.loop();
   }
-  
-  
-  
+  image(startbutton, width/2-200, 100);
+  image(optionsbutton, width/2-200, 300);
+  image(exitbutton, width/2-200, 500);
 }
 
 
@@ -72,5 +73,7 @@ void drawBuildUI(){
   rect(-300, 50, -50, 20);
   rect(-50, 20, -20, 50, 0, 18, 18, 0);
   rect(-330, 20, -300, 50, 18, 0, 0, 18);
+  triangle(-43, 27, -43, 42, -28, 35);
+  triangle(-307, 27, -307, 42, -322, 35);
   popMatrix();
 }
