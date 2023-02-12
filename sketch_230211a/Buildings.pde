@@ -26,8 +26,10 @@ void initbuildings () { // all bulidings to memory
   
   // government buildings
   //buildings.add(new building("bank", 10, 10, "", 1, 0, null, color(3, 0, 1)));
-  //buildings.add(new building("presidentialStatue", 60, 60, "", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750);
   maxBuildCategory = 1;
+  
+  //Wonder
+  //buildings.add(new building("presidentialStatue", 60, 60, "presidentkiwi.png", 40, 0, null, color(4, 2, 1), 10000, 3000, 3000, 2000, 500, 750);
 
   //buildings.add(new building("policeStation", 10, 10, "", 1, 0, null, color(0, 0, 11)));
   //buildings.add(new building("fireStation", 10, 10, "", 1, 0, null, color(0, 0, 12)));
